@@ -16,14 +16,14 @@ This repository contains two Arduino projects using **Seeed Studio mmWave sensor
 ```
 Fall_D-and-Heart_B-R_Sensor/
 ├── Fall_D/
-│   └── Fall_D.ino          ← ระบบตรวจจับการล้ม
+│   └── Fall_D.ino          ← Fall Detection / ระบบตรวจจับการล้ม
 └── HB-B/
-    └── HB-B.ino            ← ระบบวัดอัตราการเต้นของหัวใจและการหายใจ
+    └── HB-B.ino            ← Heart Rate & Breathing Monitor / ระบบวัดอัตราการเต้นของหัวใจและการหายใจ
 ```
 
 ---
 
-## 🔴 Project 1: Fall Detection (Fall_D)
+## 🧓🏻 Project 1: Fall Detection (Fall_D)
 
 ### English
 A fall detection system using the **Seeed MR60FDA2** mmWave sensor. The device monitors a room and detects whether a person has fallen. When a fall is confirmed, it sends an alert to **Firebase Firestore** and notifies a connected mobile app via **BLE**.
@@ -49,7 +49,7 @@ A fall detection system using the **Seeed MR60FDA2** mmWave sensor. The device m
 
 ---
 
-## 💙 Project 2: Heart Rate & Breathing Monitor (HB-B)
+## ♥️ Project 2: Heart Rate & Breathing Monitor (HB-B)
 
 ### English
 A vital signs monitoring system using the **Seeed MR60BHA2** mmWave sensor. The device measures heart rate and breathing rate without physical contact, and sends real-time data to a connected mobile app via **BLE**.
@@ -81,37 +81,3 @@ A vital signs monitoring system using the **Seeed MR60BHA2** mmWave sensor. The 
 - WiFi (built-in)
 
 ---
-
-## ⚙️ Configuration / การตั้งค่า
-
-Before uploading, fill in your credentials in the `.ino` file:
-
-ก่อนอัพโหลดให้กรอกข้อมูลส่วนตัวในไฟล์ `.ino`:
-
-```cpp
-// WiFi
-const char* ssid     = "YOUR_WIFI_NAME";
-const char* password = "YOUR_WIFI_PASSWORD";
-
-// Firebase
-#define API_KEY      "YOUR_API_KEY"
-#define PROJECT_ID   "YOUR_PROJECT_ID"
-#define DATABASE_URL "YOUR_DATABASE_URL"
-
-// Zone ID (for Fall Detection)
-#define ZONE_ID "YOUR_ZONE_ID"
-```
-
----
-
-## 📡 BLE Status Messages / ข้อความแจ้งเตือนผ่าน BLE
-
-| Status | Message |
-|--------|---------|
-| ไม่มีคน | `ZONE_ID : NO PEOPLE 🟢` |
-| มีคนอยู่ | `ZONE_ID : PEOPLE IN AREA 🔵` |
-| ตรวจพบการล้ม | `ZONE_ID : FALL DETECTED 🔴` |
-
----
-
-*Built with ❤️ using Arduino IDE*
