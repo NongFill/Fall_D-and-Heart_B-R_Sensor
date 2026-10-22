@@ -19,7 +19,6 @@ Fall_D-and-Heart_B-R_Sensor/
 
 ## 🧓🏻 Project 1: Fall Detection (Fall_D)
 
-### English
 A fall detection system using the **Seeed MR60FDA2** mmWave sensor. The device monitors a room and detects whether a person has fallen. When a fall is confirmed, it sends an alert to **Firebase Firestore** and notifies a connected mobile app via **BLE**.
 
 **Key Features:**
@@ -35,7 +34,6 @@ A fall detection system using the **Seeed MR60FDA2** mmWave sensor. The device m
 
 ## ♥️ Project 2: Heart Rate & Breathing Monitor (HB-B)
 
-### English
 A vital signs monitoring system using the **Seeed MR60BHA2** mmWave sensor. The device measures heart rate and breathing rate without physical contact, and sends real-time data to a connected mobile app via **BLE**.
 
 **Key Features:**
