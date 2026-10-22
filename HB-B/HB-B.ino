@@ -18,11 +18,11 @@ bool deviceConnected = false;
 class MyServerCallbacks : public BLEServerCallbacks {
   void onConnect(BLEServer* pServer) {
     deviceConnected = true;
-    Serial.println(" มือถือเชื่อมต่อแล้ว!");
+    Serial.println("มือถือเชื่อมต่อแล้ว");
   }
   void onDisconnect(BLEServer* pServer) {
     deviceConnected = false;
-    Serial.println(" มือถือตัดการเชื่อมต่อ!");
+    Serial.println("ตัดการเชื่อมต่อ");
     BLEDevice::startAdvertising(); 
   }
 };
@@ -59,7 +59,7 @@ void setup() {
 void loop() {
   if (mmWave.update(1000)) {
     if (mmWave.isHumanDetected()) {
-      Serial.println("Human Detected ✅");
+      Serial.println("Human Detected Connect");
 
       float total_phase, breath_phase, heart_phase;
       if (mmWave.getHeartBreathPhases(total_phase, breath_phase, heart_phase)) {
